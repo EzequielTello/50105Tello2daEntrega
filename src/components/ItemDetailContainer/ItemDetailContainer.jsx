@@ -13,7 +13,7 @@ const ItemDetailContainer = ({ product }) => {
     >
       <Card
         key={product.id}
-        style={{ width: "18rem", margin: 20, height: "500px" }}
+        style={{ width: "18rem", margin: 20, height: "400px" }}
       >
         <Card.Img variant="top" src={product.thumbnail} />
         <Card.Body>
