@@ -1,0 +1,44 @@
+.nav-link-home {
+  color: blue;
+  font-weight: bold;
+}
+
+.nav-link-categorias {
+  color: blue;
+  font-weight: bold;
+}
+
+.navbar-brand {
+  color: red;
+  font-size: 1.5rem;
+}
+
+
+
+.nav-dropdown-title {
+    font-weight: bold;
+    color: #007bff; 
+    
+  }
+  
+.nav-dropdown-container {
+    background-color: #595353; 
+    border: 1px solid #ddd; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 4px; 
+    padding: 10px; 
+  }
+  
+  
+  .nav-dropdown-item {
+    color: #333;
+    padding: 8px 15px; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  .nav-dropdown-item:hover {
+    background-color: #f0f0f0; /
+  }
+  
+ 
+  

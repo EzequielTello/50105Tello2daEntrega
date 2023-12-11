@@ -1,30 +1,19 @@
-import React, { useEffect, useState } from "react";
-import Loading from "../components/Loading/Loading";
-import axios from "axios";
-import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
+import React from "react";
+import { useAllProducts } from "../hooks/useProducts";
+import { LoaderComponent, ItemListContainer } from "../components";
 
-const Home = () => {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    axios
-      .get("https://dummyjson.com/products/?limit=10")
-      .then((res) => {
-        setProducts(res.data.products);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.log(error);
-        setLoading(false);
-      });
-  }, []);
+export const Home = () => {
+  const { products, loading, error } = useAllProducts(15);
 
   return (
     <div>
-      {loading ? <Loading /> : <ItemListContainer products={products} />}
+      {loading ? (
+        <LoaderComponent />
+      ) : error ? (
+        <div>Hubo un error</div>
+      ) : (
+        <ItemListContainer products={products} />
+      )}
     </div>
   );
 };
-
-export default Home;

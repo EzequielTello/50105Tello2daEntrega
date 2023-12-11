@@ -1,7 +1,7 @@
 import React from "react";
 import "./Loading.css";
 
-const Loading = () => {
+export const LoaderComponent = () => {
   return (
     <div className="loading-container">
       {
@@ -17,5 +17,3 @@ const Loading = () => {
     </div>
   );
 };
-
-export default Loading;
