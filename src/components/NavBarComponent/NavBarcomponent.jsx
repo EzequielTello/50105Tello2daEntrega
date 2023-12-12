@@ -10,13 +10,12 @@ export const NavBarComponent = () => {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home">BlueStore</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">
+          BlueStore
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            {/* <Nav.Link href="/">Home</Nav.Link> */}
-            <Link to="/">Home</Link>
-
             <NavDropdown title="Categorías" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">
                 <Link to={"/category/laptops"}>Laptops</Link>

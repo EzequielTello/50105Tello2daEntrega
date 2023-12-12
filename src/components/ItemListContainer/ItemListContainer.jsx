@@ -12,6 +12,8 @@ export const ItemListContainer = ({ products }) => {
       }}
     >
       {products.map((product) => {
+        console.log("Precio del producto:", product.price);
+
         return (
           <Card
             key={product.id}
@@ -23,6 +25,7 @@ export const ItemListContainer = ({ products }) => {
             <Card.Body>
               <Card.Title>{product.title}</Card.Title>
               <Card.Text>{product.description}</Card.Text>
+              <Card.Text>{product.price}</Card.Text>
             </Card.Body>
           </Card>
         );
